@@ -1,11 +1,17 @@
-# <a href="https://ipinfo.io/"><img src="https://raw.githubusercontent.com/ipinfo/csharp/main/src/IPinfo/icon.png" alt="IPinfo" width="24" /></a> IPinfo C# .NET SDK
+# This is not official repo.
+
+You can get rid of dirty data, at least to some extent, with the `IsCrawler` property. You must send crawler names from `appsettings.json` in the following format.
+
+```json
+"CheckCrawlers": {
+  "Enable": true,
+  "Names": [ "google" ]
+}
+```
 
 ![ipinfo](https://i.imgur.com/DbrWeE1.gif)
 
-[![License](http://img.shields.io/:license-apache-blue.svg)](LICENSE)
-[![NuGet](https://img.shields.io/nuget/dt/IPinfo.svg?style=flat-square&label=IPinfo)](https://www.nuget.org/packages/IPinfo/)
-
-This is the official C# .NET SDK for the [IPinfo.io](https://ipinfo.io) IP address API, allowing you to look up your own IP address, or get any of the following details for other IP addresses:
+This is the forked repo from official C# .NET SDK for the [IPinfo.io](https://ipinfo.io) IP address API, allowing you to look up your own IP address, or get any of the following details for other IP addresses:
 
  - [IP geolocation](https://ipinfo.io/ip-geolocation-api) (city, region, country, postal code, latitude, and longitude)
  - [ASN details](https://ipinfo.io/asn-api) (ISP or network operator, associated domain name, and type, such as business, hosting, or company)
@@ -25,19 +31,19 @@ This package can be installed from NuGet.
 ##### Install using Package Manager
 
 ```bash
-Install-Package IPinfo
+Install-Package IPinfo-Custom
 ```
 
 ##### Install using the dotnet CLI
 
 ```bash
-dotnet add package IPinfo
+dotnet add package IPinfo-Custom
 ```
 
 ##### Install with NuGet.exe
 
 ```bash
-nuget install IPinfo
+nuget install IPinfo-Custom
 ```
 
 ### Quick Start
