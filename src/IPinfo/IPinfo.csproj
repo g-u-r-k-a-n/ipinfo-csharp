@@ -4,7 +4,7 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<AssemblyName>IPinfo</AssemblyName>
 		<PackageId>IPinfo-Custom</PackageId>
-		<Version>3.0.0.3</Version>
+		<Version>3.0.0.4</Version>
 		<Title>IPinfo-Custom</Title>
 		<Authors>Gurkan Tuna</Authors>
 		<Product>IPinfo-Custom</Product>
@@ -18,7 +18,7 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageIconUrl>https://raw.githubusercontent.com/ipinfo/csharp/main/src/IPinfo/icon.png</PackageIconUrl>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<Description>This is the forked custom repo from official C#/.NET client library for the IPinfo.io IP address API</Description>
+		<Description>This is the forked custom repo from official C#/.NET client library for the IPinfo.io IP address API. You can get rid of dirty data, at least to some extent, with the IsCrawler property. You must send crawler names from appsettings.json in the following format.</Description>
 		<PackageReleaseNotes>Inlined the JSON data files into code.</PackageReleaseNotes>
 		<Copyright>Copyright © 2022 ipinfo.io</Copyright>
 		<PackageTags>IPinfo;ip;location;geolocation</PackageTags>
