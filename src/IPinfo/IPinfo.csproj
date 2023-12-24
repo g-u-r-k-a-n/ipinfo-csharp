@@ -18,7 +18,7 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageIconUrl>https://raw.githubusercontent.com/ipinfo/csharp/main/src/IPinfo/icon.png</PackageIconUrl>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<Description>This is the forkec suctom repo from official C#/.NET client library for the IPinfo.io IP address API</Description>
+		<Description>This is the forked custom repo from official C#/.NET client library for the IPinfo.io IP address API</Description>
 		<PackageReleaseNotes>Inlined the JSON data files into code.</PackageReleaseNotes>
 		<Copyright>Copyright © 2022 ipinfo.io</Copyright>
 		<PackageTags>IPinfo;ip;location;geolocation</PackageTags>
