@@ -1,4 +1,4 @@
-# This is not official repo.
+# This is not the official repo.
 
 You can get rid of dirty data, at least to some extent, with the `IsCrawler` property. You must send crawler names from `appsettings.json` in the following format.
 
@@ -8,6 +8,16 @@ You can get rid of dirty data, at least to some extent, with the `IsCrawler` pro
   "Names": [ "google" ]
 }
 ```
+You must also send the configuration (an [implementation](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfiguration?view=dotnet-plat-ext-8.0) of `IConfiguration`) along with your API token.
+
+```csharp
+// initializing IPinfo client
+string token = "MY_TOKEN";
+IPinfoClient client = new IPinfoClient.Builder()
+    .AccessToken(token, configuration)
+    .Build();
+```
+
 
 ![ipinfo](https://i.imgur.com/DbrWeE1.gif)
 
