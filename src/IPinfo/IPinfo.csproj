@@ -4,7 +4,7 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<AssemblyName>IPinfo</AssemblyName>
 		<PackageId>IPinfo-Custom</PackageId>
-		<Version>3.0.0.5</Version>
+		<Version>3.0.0.6</Version>
 		<Title>IPinfo-Custom</Title>
 		<Authors>Gurkan Tuna</Authors>
 		<Product>IPinfo-Custom</Product>
