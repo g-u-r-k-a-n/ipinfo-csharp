@@ -24,8 +24,13 @@ namespace IPinfo.Apis
         /// <summary>
         /// Crawlers that you want to be handle can be sent in appsettings.json file as "CheckCrawlers:{Enable:true,Names:["google","yandex"]}" format.
         /// </summary>
-        private readonly HashSet<string> _crawlers;
+        private readonly static HashSet<string> _crawlers;
         private readonly bool _checkCrawlers;
+
+        static IPApi()
+        {
+            _crawlers = _crawlers ?? new HashSet<string>(_staticCrawlers);
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IPApi"/> class.
@@ -34,13 +39,11 @@ namespace IPinfo.Apis
         /// <param name="token"> token. </param>
         internal IPApi(IHttpClient httpClient, string token, CacheHandler cacheHandler, IConfiguration configuration = null)
             : base(httpClient, token, cacheHandler) 
-        {
-            
+        {            
             bool.TryParse(configuration?.GetSection("CheckCrawlers:Enable")?.Value, out _checkCrawlers);
             if (_checkCrawlers)
             {
                 var argCrawlers = configuration.GetSection("CheckCrawlers:Names")?.AsEnumerable()?.Select(x => x.Value?.ToLower());                
-                _crawlers = new HashSet<string>(_staticCrawlers);
                 if (argCrawlers.Any()) { argCrawlers.ToList().ForEach(c => _crawlers.Add(c));  }
             }
         }
@@ -171,7 +174,7 @@ namespace IPinfo.Apis
                 var isBot = false;
                 orgName = orgName?.ToLower();
                 hostName = hostName?.ToLower();
-                foreach (var bot in this._crawlers) 
+                foreach (var bot in _crawlers) 
                 {            
                     if (!string.IsNullOrWhiteSpace(bot)) 
                     {
